@@ -1,0 +1,48 @@
+
+State Machine - |ALU|add_next_state
+Name add_next_state.add2_S3 add_next_state.add2_S2 add_next_state.add2_S1 add_next_state.add2_S0 add_next_state.add2_S4 
+add_next_state.add2_S0 0 0 0 0 0 
+add_next_state.add2_S1 0 0 1 1 0 
+add_next_state.add2_S2 0 1 0 1 0 
+add_next_state.add2_S3 1 0 0 1 0 
+add_next_state.add2_S4 0 0 0 1 1 
+
+State Machine - |ALU|add_current_state
+Name add_current_state.add2_S3 add_current_state.add2_S2 add_current_state.add2_S1 add_current_state.add2_S0 add_current_state.add2_S4 
+add_current_state.add2_S0 0 0 0 0 0 
+add_current_state.add2_S1 0 0 1 1 0 
+add_current_state.add2_S2 0 1 0 1 0 
+add_current_state.add2_S3 1 0 0 1 0 
+add_current_state.add2_S4 0 0 0 1 1 
+
+State Machine - |ALU|nor_next_state
+Name nor_next_state.nor2_S3 nor_next_state.nor2_S2 nor_next_state.nor2_S1 nor_next_state.nor2_S0 nor_next_state.nor2_S4 
+nor_next_state.nor2_S0 0 0 0 0 0 
+nor_next_state.nor2_S1 0 0 1 1 0 
+nor_next_state.nor2_S2 0 1 0 1 0 
+nor_next_state.nor2_S3 1 0 0 1 0 
+nor_next_state.nor2_S4 0 0 0 1 1 
+
+State Machine - |ALU|nor_current_state
+Name nor_current_state.nor2_S3 nor_current_state.nor2_S2 nor_current_state.nor2_S1 nor_current_state.nor2_S0 nor_current_state.nor2_S4 
+nor_current_state.nor2_S0 0 0 0 0 0 
+nor_current_state.nor2_S1 0 0 1 1 0 
+nor_current_state.nor2_S2 0 1 0 1 0 
+nor_current_state.nor2_S3 1 0 0 1 0 
+nor_current_state.nor2_S4 0 0 0 1 1 
+
+State Machine - |ALU|and_next_state
+Name and_next_state.and2_S3 and_next_state.and2_S2 and_next_state.and2_S1 and_next_state.and2_S0 and_next_state.and2_S4 
+and_next_state.and2_S0 0 0 0 0 0 
+and_next_state.and2_S1 0 0 1 1 0 
+and_next_state.and2_S2 0 1 0 1 0 
+and_next_state.and2_S3 1 0 0 1 0 
+and_next_state.and2_S4 0 0 0 1 1 
+
+State Machine - |ALU|and_current_state
+Name and_current_state.and2_S3 and_current_state.and2_S2 and_current_state.and2_S1 and_current_state.and2_S0 and_current_state.and2_S4 
+and_current_state.and2_S0 0 0 0 0 0 
+and_current_state.and2_S1 0 0 1 1 0 
+and_current_state.and2_S2 0 1 0 1 0 
+and_current_state.and2_S3 1 0 0 1 0 
+and_current_state.and2_S4 0 0 0 1 1 

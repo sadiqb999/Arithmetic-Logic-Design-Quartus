@@ -1,0 +1,1558 @@
+// Copyright (C) 1991-2008 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EPF10K30ETC144-1 Package TQFP144
+// 
+
+// 
+// This SDF file should be used for Custom Verilog HDL only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "ALU")
+  (DATE "12/17/2022 14:38:08")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 8.1 Build 163 10/28/2008 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE and_current_state\.and2_S1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE and_current_state\.and2_S1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Add2\~168.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (1900:1900:1900) (1900:1900:1900))
+        (PORT datad (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE and_current_state\.and2_S2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE and_current_state\.and2_S2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE and_current_state\.and2_S3.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE and_current_state\.and2_S3.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE and_current_state\.and2_S4.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (600:600:600) (600:600:600))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE and_current_state\.and2_S4.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~317.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (600:600:600) (600:600:600))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (800:800:800) (800:800:800))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~318.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (100:100:100) (100:100:100))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (1300:1300:1300) (1300:1300:1300))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE and_next_state\.and2_S1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (800:800:800) (800:800:800))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE and_next_state\.and2_S1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Selector1\~116.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (500:500:500) (500:500:500))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (1300:1300:1300) (1300:1300:1300))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Selector1\~117.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Selector1\~118.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (400:400:400) (400:400:400))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_current_state\.add2_S0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (600:600:600) (600:600:600))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_current_state\.add2_S0.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Selector0\~20.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (100:100:100) (100:100:100))
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE temp\[1\].lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE and_next_state\.and2_S0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (800:800:800) (800:800:800))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE and_next_state\.and2_S0.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~330.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (600:600:600) (600:600:600))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE A\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1300:1300:1300) (1300:1300:1300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE B\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1300:1300:1300) (1300:1300:1300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE opcode\[1\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1300:1300:1300) (1300:1300:1300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE opcode\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1300:1300:1300) (1300:1300:1300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE opcode\[2\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1300:1300:1300) (1300:1300:1300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Equal4\~12.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE clk\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (1300:1300:1300) (1300:1300:1300))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_next_state\.add2_S2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_next_state\.add2_S2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_current_state\.add2_S2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_current_state\.add2_S2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_current_state\.add2_S3.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_current_state\.add2_S3.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_next_state\.add2_S0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (800:800:800) (800:800:800))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_next_state\.add2_S0.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_next_state\.add2_S1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (800:800:800) (800:800:800))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_next_state\.add2_S1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_current_state\.add2_S1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_current_state\.add2_S1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Equal0\~26.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[0\]\~1435.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (200:200:200) (200:200:200))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (600:600:600) (600:600:600))
+        (IOPATH dataa cascout (700:700:700) (700:700:700))
+        (IOPATH datab cascout (600:600:600) (600:600:600))
+        (IOPATH datac cascout (600:600:600) (600:600:600))
+        (IOPATH datad cascout (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[0\]\~1443.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (400:400:400) (400:400:400))
+        (PORT datab (200:200:200) (200:200:200))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (700:700:700) (700:700:700))
+        (PORT cascin (0:0:0) (0:0:0))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+        (IOPATH cascin combout (1000:1000:1000) (1000:1000:1000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Equal2\~13.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_next_state\.nor2_S2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_next_state\.nor2_S2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_current_state\.nor2_S2.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_current_state\.nor2_S2.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_current_state\.nor2_S3.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (500:500:500) (500:500:500))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_current_state\.nor2_S3.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_next_state\.nor2_S0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (500:500:500) (500:500:500))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_next_state\.nor2_S0.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_next_state\.nor2_S1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_next_state\.nor2_S1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_current_state\.nor2_S1.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_current_state\.nor2_S1.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[0\]\~1419.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[0\]\~15.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (600:600:600) (600:600:600))
+        (PORT datad (600:600:600) (600:600:600))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[0\]\$latch.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE A\[1\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (2800:2800:2800) (2800:2800:2800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE B\[1\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (2800:2800:2800) (2800:2800:2800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\~1420.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (600:600:600) (600:600:600))
+        (PORT datac (1900:1900:1900) (1900:1900:1900))
+        (PORT datad (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\~1421.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (600:600:600) (600:600:600))
+        (PORT datac (1900:1900:1900) (1900:1900:1900))
+        (PORT datad (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[1\]\~1422.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (600:600:600) (600:600:600))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[1\]\~1423.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (100:100:100) (100:100:100))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (500:500:500) (500:500:500))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[1\]\~10.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (600:600:600) (600:600:600))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[1\]\$latch.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE A\[2\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (2800:2800:2800) (2800:2800:2800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE B\[2\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (2800:2800:2800) (2800:2800:2800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[2\]\~1437.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (1300:1300:1300) (1300:1300:1300))
+        (PORT datac (1000:1000:1000) (1000:1000:1000))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH dataa cascout (700:700:700) (700:700:700))
+        (IOPATH datab cascout (600:600:600) (600:600:600))
+        (IOPATH datac cascout (600:600:600) (600:600:600))
+        (IOPATH datad cascout (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[2\]\~1444.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (1000:1000:1000) (1000:1000:1000))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (700:700:700) (700:700:700))
+        (PORT cascin (0:0:0) (0:0:0))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+        (IOPATH cascin combout (1000:1000:1000) (1000:1000:1000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[2\]\~1425.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (100:100:100) (100:100:100))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[2\]\~5.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (800:800:800) (800:800:800))
+        (PORT datad (900:900:900) (900:900:900))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[2\]\$latch.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1000:1000:1000) (1000:1000:1000))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE temp\~34.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (100:100:100) (100:100:100))
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Add0\~172.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (200:200:200) (200:200:200))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (400:400:400) (400:400:400))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Add2\~169.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1900:1900:1900) (1900:1900:1900))
+        (PORT datac (1100:1100:1100) (1100:1100:1100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Add4\~75.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1000:1000:1000) (1000:1000:1000))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE A\[3\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (2800:2800:2800) (2800:2800:2800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE B\[3\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio dataout (2800:2800:2800) (2800:2800:2800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Add6\~48.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (500:500:500) (500:500:500))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (1300:1300:1300) (1300:1300:1300))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[3\]\~1426.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (1300:1300:1300) (1300:1300:1300))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE add_current_state\.add2_S4.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE add_current_state\.add2_S4.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[3\]\~1427.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE nor_current_state\.nor2_S4.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (500:500:500) (500:500:500))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab regin (600:600:600) (600:600:600))
+        (IOPATH datac regin (600:600:600) (600:600:600))
+        (IOPATH datad regin (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_lcell_register")
+    (INSTANCE nor_current_state\.nor2_S4.lereg)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (200:200:200) (200:200:200))
+        (IOPATH (posedge clk) regout (300:300:300) (300:300:300))
+      )
+    )
+    (TIMINGCHECK
+      (SETUP datain (posedge clk) (400:400:400))
+      (HOLD datain (posedge clk) (700:700:700))
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[3\]\~1428.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (800:800:800) (800:800:800))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[3\]\~0.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (600:600:600) (600:600:600))
+        (PORT datad (600:600:600) (600:600:600))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[3\]\$latch.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (600:600:600) (600:600:600))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\~1439.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (200:200:200) (200:200:200))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\~1442.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (1000:1000:1000) (1000:1000:1000))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (600:600:600) (600:600:600))
+        (IOPATH dataa cascout (700:700:700) (700:700:700))
+        (IOPATH datab cascout (600:600:600) (600:600:600))
+        (IOPATH datac cascout (600:600:600) (600:600:600))
+        (IOPATH datad cascout (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~338.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (700:700:700) (700:700:700))
+        (PORT datab (200:200:200) (200:200:200))
+        (PORT datac (200:200:200) (200:200:200))
+        (PORT datad (500:500:500) (500:500:500))
+        (PORT cascin (0:0:0) (0:0:0))
+        (IOPATH dataa cascout (700:700:700) (700:700:700))
+        (IOPATH datab cascout (600:600:600) (600:600:600))
+        (IOPATH datac cascout (600:600:600) (600:600:600))
+        (IOPATH datad cascout (400:400:400) (400:400:400))
+        (IOPATH cascin cascout (600:600:600) (600:600:600))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~336.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (600:600:600) (600:600:600))
+        (PORT datab (800:800:800) (800:800:800))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (500:500:500) (500:500:500))
+        (PORT cascin (0:0:0) (0:0:0))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+        (IOPATH cascin combout (1000:1000:1000) (1000:1000:1000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\~1440.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (1000:1000:1000) (1000:1000:1000))
+        (PORT datad (1300:1300:1300) (1300:1300:1300))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~331.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (100:100:100) (100:100:100))
+        (PORT datab (700:700:700) (700:700:700))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH dataa cascout (700:700:700) (700:700:700))
+        (IOPATH datab cascout (600:600:600) (600:600:600))
+        (IOPATH datac cascout (600:600:600) (600:600:600))
+        (IOPATH datad cascout (400:400:400) (400:400:400))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~337.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (700:700:700) (700:700:700))
+        (PORT datad (500:500:500) (500:500:500))
+        (PORT cascin (0:0:0) (0:0:0))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+        (IOPATH cascin combout (1000:1000:1000) (1000:1000:1000))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\~321.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (500:500:500) (500:500:500))
+        (PORT datab (500:500:500) (500:500:500))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH dataa combout (1100:1100:1100) (1100:1100:1100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE ZF\[0\]\$latch.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE Add6\~49.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1300:1300:1300) (1300:1300:1300))
+        (PORT datac (1300:1300:1300) (1300:1300:1300))
+        (PORT datad (500:500:500) (500:500:500))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE CF\[0\]\$latch.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (100:100:100) (100:100:100))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (700:700:700) (700:700:700))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_lcell")
+    (INSTANCE C\[3\]\$latch\~3.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (600:600:600) (600:600:600))
+        (PORT datac (100:100:100) (100:100:100))
+        (PORT datad (100:100:100) (100:100:100))
+        (IOPATH datab combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datac combout (1000:1000:1000) (1000:1000:1000))
+        (IOPATH datad combout (800:800:800) (800:800:800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE C\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1600:1600:1600) (1600:1600:1600))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE C\[1\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (700:700:700) (700:700:700))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE C\[2\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (800:800:800) (800:800:800))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE C\[3\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (300:300:300) (300:300:300))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE C\[4\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (0:0:0) (0:0:0))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE ZF\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (700:700:700) (700:700:700))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE CF\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1700:1700:1700) (1700:1700:1700))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "flex10ke_asynch_io")
+    (INSTANCE SF\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (700:700:700) (700:700:700))
+        (IOPATH datain padio (3800:3800:3800) (3800:3800:3800))
+      )
+    )
+  )
+)
