@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 10.000 ns
+From           : A[1]
+To             : temp[1]
+From Clock     : --
+To Clock       : opcode[2]
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 17.200 ns
+From           : temp[1]
+To             : SF[0]
+From Clock     : clk
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 15.700 ns
+From           : A[1]
+To             : SF[0]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.200 ns
+From           : A[0]
+To             : C[0]$latch
+From Clock     : --
+To Clock       : opcode[0]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 80.65 MHz ( period = 12.400 ns )
+From           : and_current_state.and2_S1
+To             : ZF[0]$latch
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'opcode[0]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 93.46 MHz ( period = 10.700 ns )
+From           : temp[1]
+To             : temp[1]
+From Clock     : opcode[0]
+To Clock       : opcode[0]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'opcode[1]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 93.46 MHz ( period = 10.700 ns )
+From           : temp[1]
+To             : temp[1]
+From Clock     : opcode[1]
+To Clock       : opcode[1]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'opcode[2]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 93.46 MHz ( period = 10.700 ns )
+From           : temp[1]
+To             : temp[1]
+From Clock     : opcode[2]
+To Clock       : opcode[2]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : add_current_state.add2_S2
+To             : C[1]$latch
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 4
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 4
+
+--------------------------------------------------------------------------------------
+

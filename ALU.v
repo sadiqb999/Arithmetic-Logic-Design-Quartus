@@ -1,0 +1,138 @@
+module ALU(A, B, C, clk, rst, opcode, ZF, CF, SF);
+
+input rst, clk;
+input [3:0]A;
+input [3:0]B;
+input [2:0]opcode;
+
+output reg [4:0]C;
+output reg [0:0]ZF;
+output reg[0:0]CF;
+output reg [0:0]SF;
+
+reg [2:0]and_current_state;
+reg [2:0]and_next_state;
+
+reg [2:0]nor_current_state;
+reg [2:0]nor_next_state;
+
+reg [2:0]add_current_state;
+reg [2:0]add_next_state;
+reg [1:0]temp;
+
+
+
+parameter and2_S0 = 3'b000, and2_S1 = 3'b001, and2_S2 = 3'b010, and2_S3 = 3'b011, and2_S4 = 3'b100;
+parameter nor2_S0 = 3'b000, nor2_S1 = 3'b001, nor2_S2 = 3'b010, nor2_S3 = 3'b011, nor2_S4 = 3'b100;
+parameter add2_S0 = 3'b000, add2_S1 = 3'b001, add2_S2 = 3'b010, add2_S3 = 3'b011, add2_S4 = 3'b100;
+
+
+// State inside state transition logic (Bitwise AND operartion)
+always @(posedge clk)
+	begin
+		if (opcode == 3'b001)                           
+
+		begin
+			and_current_state = and_next_state;
+			case(and_current_state)
+				and2_S0: and_next_state = and2_S1;
+				and2_S1: and_next_state = and2_S2;
+				and2_S2: and_next_state = and2_S3;
+				and2_S3: and_next_state = and2_S4;
+				and2_S4: and_next_state = and2_S0;
+			endcase
+		end
+		
+		else if (opcode == 3'b011)                           
+
+		begin
+			nor_current_state = nor_next_state;
+			case(nor_current_state)
+				nor2_S0: nor_next_state = nor2_S1;
+				nor2_S1: nor_next_state = nor2_S2;
+				nor2_S2: nor_next_state = nor2_S3;
+				nor2_S3: nor_next_state = nor2_S4;
+				nor2_S4: nor_next_state = nor2_S0;
+			endcase
+		end
+		
+		else if (opcode == 3'b010)                           
+
+		begin
+			add_current_state = add_next_state;
+			case(add_current_state)
+				add2_S0: add_next_state = add2_S1;
+				add2_S1: add_next_state = add2_S2;
+				add2_S2: add_next_state = add2_S3;
+				add2_S3: add_next_state = add2_S4;
+				add2_S4: add_next_state = add2_S0;
+			endcase
+		end
+		
+		
+	end
+
+
+//Output logic based on states (Bitwise AND operartion)
+always @(*)
+	begin
+		if(opcode == 3'b001)
+			case(and_current_state)
+				//and2_S0: C = 0;
+				and2_S1: C[0]= A[0] & B[0];
+				and2_S2: C[1]= A[1] & B[1];
+				and2_S3: C[2]= A[2] & B[2];
+				and2_S4: begin 
+						 C[3]= A[3] & B[3];
+						 ZF = (C == 5'b00000) ? 1:0;
+						 SF = (C[3] == 1) ? 1:0;
+						 end
+			endcase
+		
+		else if(opcode == 3'b011)
+			case(nor_current_state)
+				//and2_S0: C = 0;
+				nor2_S1: C[0]= ~(A[0] | B[0]);
+				nor2_S2: C[1]= ~(A[1] | B[1]);
+				nor2_S3: C[2]= ~(A[2] | B[2]);
+				nor2_S4: begin
+						 C[3]= ~(A[3] | B[3]);
+						 ZF = (C == 5'b00000) ? 1:0;
+						 SF = (C[3] == 1) ? 1:0;
+						 end
+			endcase	
+			
+		else if(opcode == 3'b010)
+			temp[1] = 0;
+			case(add_current_state)
+				//and2_S0: C = 0;
+				add2_S1: begin
+						 temp = A[0] + B[0] + temp[1];
+						 C[0] = temp[0];
+						 end
+				add2_S2: begin
+						 temp = A[0] + B[0] + temp[1];
+						 temp = A[1] + B[1] + temp[1];
+						 C[1] = temp[0];
+						 end
+				add2_S3: begin
+						 temp = A[0] + B[0] + temp[1];
+						 temp = A[1] + B[1] + temp[1];
+						 temp = A[2] + B[2] + temp[1];
+						 C[2] = temp[0];
+						 end
+				add2_S4: begin
+						 temp = A[0] + B[0] + temp[1];
+						 temp = A[1] + B[1] + temp[1];
+						 temp = A[2] + B[2] + temp[1];
+						 temp = A[3] + B[3] + temp[1];
+						 C[3] = temp[0];
+						 ZF = (C == 5'b00000) ? 1:0;
+						 SF = (C[3] == 1) ? 1:0;
+						 CF = (temp[1] == 1) ? 1:0;
+						 end
+			endcase
+		
+    end	
+
+endmodule

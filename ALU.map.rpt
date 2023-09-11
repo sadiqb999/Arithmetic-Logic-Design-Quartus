@@ -1,0 +1,422 @@
+Analysis & Synthesis report for ALU
+Sat Dec 17 14:38:01 2022
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. State Machine - |ALU|add_next_state
+  8. State Machine - |ALU|add_current_state
+  9. State Machine - |ALU|nor_next_state
+ 10. State Machine - |ALU|nor_current_state
+ 11. State Machine - |ALU|and_next_state
+ 12. State Machine - |ALU|and_current_state
+ 13. User-Specified and Inferred Latches
+ 14. Registers Removed During Synthesis
+ 15. General Register Statistics
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
+ 17. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                          ;
++-----------------------------+-----------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sat Dec 17 14:38:01 2022   ;
+; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
+; Revision Name               ; ALU                                     ;
+; Top-level Entity Name       ; ALU                                     ;
+; Family                      ; FLEX10KE                                ;
+; Total logic elements        ; 70                                      ;
+; Total pins                  ; 21                                      ;
+; Total memory bits           ; 0                                       ;
+; Total PLLs                  ; 0                                       ;
++-----------------------------+-----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                 ;
++----------------------------------------------------------------+--------------+---------------+
+; Option                                                         ; Setting      ; Default Value ;
++----------------------------------------------------------------+--------------+---------------+
+; Top-level entity name                                          ; ALU          ; ALU           ;
+; Family name                                                    ; FLEX10KE     ; Stratix II    ;
+; Type of Retiming Performed During Resynthesis                  ; Full         ;               ;
+; Resynthesis Optimization Effort                                ; Normal       ;               ;
+; Physical Synthesis Level for Resynthesis                       ; Normal       ;               ;
+; Use Generated Physical Constraints File                        ; On           ;               ;
+; Use smart compilation                                          ; Off          ; Off           ;
+; Create Debugging Nodes for IP Cores                            ; Off          ; Off           ;
+; Preserve fewer node names                                      ; On           ; On            ;
+; Disable OpenCore Plus hardware evaluation                      ; Off          ; Off           ;
+; Verilog Version                                                ; Verilog_2001 ; Verilog_2001  ;
+; VHDL Version                                                   ; VHDL93       ; VHDL93        ;
+; State Machine Processing                                       ; Auto         ; Auto          ;
+; Safe State Machine                                             ; Off          ; Off           ;
+; Extract Verilog State Machines                                 ; On           ; On            ;
+; Extract VHDL State Machines                                    ; On           ; On            ;
+; Ignore Verilog initial constructs                              ; Off          ; Off           ;
+; Iteration limit for constant Verilog loops                     ; 5000         ; 5000          ;
+; Iteration limit for non-constant Verilog loops                 ; 250          ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On           ; On            ;
+; Parallel Synthesis                                             ; Off          ; Off           ;
+; NOT Gate Push-Back                                             ; On           ; On            ;
+; Power-Up Don't Care                                            ; On           ; On            ;
+; Remove Redundant Logic Cells                                   ; Off          ; Off           ;
+; Remove Duplicate Registers                                     ; On           ; On            ;
+; Ignore CARRY Buffers                                           ; Off          ; Off           ;
+; Ignore CASCADE Buffers                                         ; Off          ; Off           ;
+; Ignore GLOBAL Buffers                                          ; Off          ; Off           ;
+; Ignore ROW GLOBAL Buffers                                      ; Off          ; Off           ;
+; Ignore LCELL Buffers                                           ; Off          ; Off           ;
+; Ignore SOFT Buffers                                            ; On           ; On            ;
+; Limit AHDL Integers to 32 Bits                                 ; Off          ; Off           ;
+; Auto Implement in ROM                                          ; Off          ; Off           ;
+; Optimization Technique                                         ; Area         ; Area          ;
+; Carry Chain Length                                             ; 32           ; 32            ;
+; Cascade Chain Length                                           ; 2            ; 2             ;
+; Auto Carry Chains                                              ; On           ; On            ;
+; Auto Open-Drain Pins                                           ; On           ; On            ;
+; Auto ROM Replacement                                           ; On           ; On            ;
+; Auto RAM Replacement                                           ; On           ; On            ;
+; Auto Clock Enable Replacement                                  ; On           ; On            ;
+; Strict RAM Replacement                                         ; Off          ; Off           ;
+; Auto Resource Sharing                                          ; Off          ; Off           ;
+; Allow Any RAM Size For Recognition                             ; Off          ; Off           ;
+; Allow Any ROM Size For Recognition                             ; Off          ; Off           ;
+; Use LogicLock Constraints during Resource Balancing            ; On           ; On            ;
+; Ignore translate_off and synthesis_off directives              ; Off          ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report             ; On           ; On            ;
+; HDL message level                                              ; Level2       ; Level2        ;
+; Suppress Register Optimization Related Messages                ; Off          ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100          ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100          ; 100           ;
+; Block Design Naming                                            ; Auto         ; Auto          ;
+; Synthesis Effort                                               ; Auto         ; Auto          ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On           ; On            ;
+; Analysis & Synthesis Message Level                             ; Medium       ; Medium        ;
++----------------------------------------------------------------+--------------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path   ;
++----------------------------------+-----------------+------------------------+--------------------------------+
+; ALU.v                            ; yes             ; User Verilog HDL File  ; C:/altera/81/quartus/ALU/ALU.v ;
++----------------------------------+-----------------+------------------------+--------------------------------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------------+------------+
+; Resource                       ; Usage      ;
++--------------------------------+------------+
+; Total logic elements           ; 70         ;
+; Total combinational functions  ; 70         ;
+;     -- Total 4-input functions ; 23         ;
+;     -- Total 3-input functions ; 43         ;
+;     -- Total 2-input functions ; 4          ;
+;     -- Total 1-input functions ; 0          ;
+;     -- Total 0-input functions ; 0          ;
+; Total registers                ; 21         ;
+; I/O pins                       ; 21         ;
+; Maximum fan-out node           ; clk        ;
+; Maximum fan-out                ; 21         ;
+; Total fan-out                  ; 262        ;
+; Average fan-out                ; 2.88       ;
++--------------------------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |ALU                       ; 70 (70)     ; 21           ; 0           ; 21   ; 49 (49)      ; 0 (0)             ; 21 (21)          ; 0 (0)           ; 0 (0)      ; |ALU                ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ALU|add_next_state                                                                                                                 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; Name                   ; add_next_state.add2_S3 ; add_next_state.add2_S2 ; add_next_state.add2_S1 ; add_next_state.add2_S0 ; add_next_state.add2_S4 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; add_next_state.add2_S0 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ;
+; add_next_state.add2_S1 ; 0                      ; 0                      ; 1                      ; 1                      ; 0                      ;
+; add_next_state.add2_S2 ; 0                      ; 1                      ; 0                      ; 1                      ; 0                      ;
+; add_next_state.add2_S3 ; 1                      ; 0                      ; 0                      ; 1                      ; 0                      ;
+; add_next_state.add2_S4 ; 0                      ; 0                      ; 0                      ; 1                      ; 1                      ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ALU|add_current_state                                                                                                                                ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; Name                      ; add_current_state.add2_S3 ; add_current_state.add2_S2 ; add_current_state.add2_S1 ; add_current_state.add2_S0 ; add_current_state.add2_S4 ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; add_current_state.add2_S0 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ;
+; add_current_state.add2_S1 ; 0                         ; 0                         ; 1                         ; 1                         ; 0                         ;
+; add_current_state.add2_S2 ; 0                         ; 1                         ; 0                         ; 1                         ; 0                         ;
+; add_current_state.add2_S3 ; 1                         ; 0                         ; 0                         ; 1                         ; 0                         ;
+; add_current_state.add2_S4 ; 0                         ; 0                         ; 0                         ; 1                         ; 1                         ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ALU|nor_next_state                                                                                                                 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; Name                   ; nor_next_state.nor2_S3 ; nor_next_state.nor2_S2 ; nor_next_state.nor2_S1 ; nor_next_state.nor2_S0 ; nor_next_state.nor2_S4 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; nor_next_state.nor2_S0 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ;
+; nor_next_state.nor2_S1 ; 0                      ; 0                      ; 1                      ; 1                      ; 0                      ;
+; nor_next_state.nor2_S2 ; 0                      ; 1                      ; 0                      ; 1                      ; 0                      ;
+; nor_next_state.nor2_S3 ; 1                      ; 0                      ; 0                      ; 1                      ; 0                      ;
+; nor_next_state.nor2_S4 ; 0                      ; 0                      ; 0                      ; 1                      ; 1                      ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ALU|nor_current_state                                                                                                                                ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; Name                      ; nor_current_state.nor2_S3 ; nor_current_state.nor2_S2 ; nor_current_state.nor2_S1 ; nor_current_state.nor2_S0 ; nor_current_state.nor2_S4 ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; nor_current_state.nor2_S0 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ;
+; nor_current_state.nor2_S1 ; 0                         ; 0                         ; 1                         ; 1                         ; 0                         ;
+; nor_current_state.nor2_S2 ; 0                         ; 1                         ; 0                         ; 1                         ; 0                         ;
+; nor_current_state.nor2_S3 ; 1                         ; 0                         ; 0                         ; 1                         ; 0                         ;
+; nor_current_state.nor2_S4 ; 0                         ; 0                         ; 0                         ; 1                         ; 1                         ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ALU|and_next_state                                                                                                                 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; Name                   ; and_next_state.and2_S3 ; and_next_state.and2_S2 ; and_next_state.and2_S1 ; and_next_state.and2_S0 ; and_next_state.and2_S4 ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; and_next_state.and2_S0 ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ;
+; and_next_state.and2_S1 ; 0                      ; 0                      ; 1                      ; 1                      ; 0                      ;
+; and_next_state.and2_S2 ; 0                      ; 1                      ; 0                      ; 1                      ; 0                      ;
+; and_next_state.and2_S3 ; 1                      ; 0                      ; 0                      ; 1                      ; 0                      ;
+; and_next_state.and2_S4 ; 0                      ; 0                      ; 0                      ; 1                      ; 1                      ;
++------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |ALU|and_current_state                                                                                                                                ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; Name                      ; and_current_state.and2_S3 ; and_current_state.and2_S2 ; and_current_state.and2_S1 ; and_current_state.and2_S0 ; and_current_state.and2_S4 ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+; and_current_state.and2_S0 ; 0                         ; 0                         ; 0                         ; 0                         ; 0                         ;
+; and_current_state.and2_S1 ; 0                         ; 0                         ; 1                         ; 1                         ; 0                         ;
+; and_current_state.and2_S2 ; 0                         ; 1                         ; 0                         ; 1                         ; 0                         ;
+; and_current_state.and2_S3 ; 1                         ; 0                         ; 0                         ; 1                         ; 0                         ;
+; and_current_state.and2_S4 ; 0                         ; 0                         ; 0                         ; 1                         ; 1                         ;
++---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                     ;
++----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal       ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------------+------------------------+
+; C[0]$latch                                         ; C[0]~15                   ; yes                    ;
+; C[1]$latch                                         ; C[1]~10                   ; yes                    ;
+; C[2]$latch                                         ; C[2]~5                    ; yes                    ;
+; C[3]$latch                                         ; C[3]~0                    ; yes                    ;
+; ZF[0]$latch                                        ; C[3]~0                    ; yes                    ;
+; CF[0]$latch                                        ; add_current_state.add2_S4 ; yes                    ;
+; SF[0]$latch                                        ; C[3]~0                    ; yes                    ;
+; temp[1]                                            ; Selector0                 ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                           ;                        ;
++----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++----------------------------------------+---------------------------------------+
+; Register name                          ; Reason for Removal                    ;
++----------------------------------------+---------------------------------------+
+; add_next_state~35                      ; Lost fanout                           ;
+; add_next_state~36                      ; Lost fanout                           ;
+; add_current_state~35                   ; Lost fanout                           ;
+; add_current_state~36                   ; Lost fanout                           ;
+; nor_next_state~25                      ; Lost fanout                           ;
+; nor_next_state~26                      ; Lost fanout                           ;
+; nor_current_state~25                   ; Lost fanout                           ;
+; nor_current_state~26                   ; Lost fanout                           ;
+; and_next_state~15                      ; Lost fanout                           ;
+; and_next_state~16                      ; Lost fanout                           ;
+; and_current_state~15                   ; Lost fanout                           ;
+; and_current_state~16                   ; Lost fanout                           ;
+; nor_current_state.nor2_S0              ; Lost fanout                           ;
+; and_current_state.and2_S0              ; Lost fanout                           ;
+; and_next_state.and2_S2                 ; Merged with and_current_state.and2_S1 ;
+; add_next_state.add2_S3                 ; Merged with add_current_state.add2_S2 ;
+; nor_next_state.nor2_S3                 ; Merged with nor_current_state.nor2_S2 ;
+; and_next_state.and2_S3                 ; Merged with and_current_state.and2_S2 ;
+; add_next_state.add2_S4                 ; Merged with add_current_state.add2_S3 ;
+; nor_next_state.nor2_S4                 ; Merged with nor_current_state.nor2_S3 ;
+; and_next_state.and2_S4                 ; Merged with and_current_state.and2_S3 ;
+; Total Number of Removed Registers = 21 ;                                       ;
++----------------------------------------+---------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 21    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ALU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; and2_S0        ; 000   ; Unsigned Binary                            ;
+; and2_S1        ; 001   ; Unsigned Binary                            ;
+; and2_S2        ; 010   ; Unsigned Binary                            ;
+; and2_S3        ; 011   ; Unsigned Binary                            ;
+; and2_S4        ; 100   ; Unsigned Binary                            ;
+; nor2_S0        ; 000   ; Unsigned Binary                            ;
+; nor2_S1        ; 001   ; Unsigned Binary                            ;
+; nor2_S2        ; 010   ; Unsigned Binary                            ;
+; nor2_S3        ; 011   ; Unsigned Binary                            ;
+; nor2_S4        ; 100   ; Unsigned Binary                            ;
+; add2_S0        ; 000   ; Unsigned Binary                            ;
+; add2_S1        ; 001   ; Unsigned Binary                            ;
+; add2_S2        ; 010   ; Unsigned Binary                            ;
+; add2_S3        ; 011   ; Unsigned Binary                            ;
+; add2_S4        ; 100   ; Unsigned Binary                            ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
+    Info: Processing started: Sat Dec 17 14:38:00 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
+Info: Found 1 design units, including 1 entities, in source file ALU.v
+    Info: Found entity 1: ALU
+Warning: EDA synthesis tool is specified as "Custom", but Library Mapping File is not specified
+Warning: EDA synthesis tool is specified as "Custom", but VCC is not specified
+Warning: EDA synthesis tool is specified as "Custom", but GND is not specified
+Info: Elaborating entity "ALU" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at ALU.v(87): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at ALU.v(88): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(80): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at ALU.v(80): all case item expressions in this case statement are onehot
+Warning (10230): Verilog HDL assignment warning at ALU.v(100): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at ALU.v(101): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(93): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at ALU.v(93): all case item expressions in this case statement are onehot
+Warning (10230): Verilog HDL assignment warning at ALU.v(130): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at ALU.v(131): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at ALU.v(132): truncated value with size 32 to match size of target (1)
+Warning (10270): Verilog HDL Case Statement warning at ALU.v(107): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at ALU.v(107): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(136): inferring latch(es) for variable "C", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(136): inferring latch(es) for variable "ZF", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(136): inferring latch(es) for variable "SF", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(136): inferring latch(es) for variable "temp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ALU.v(136): inferring latch(es) for variable "CF", which holds its previous value in one or more paths through the always construct
+Warning (10030): Net "C[4]" at ALU.v(8) has no driver or initial value, using a default initial value '0'
+Info (10041): Inferred latch for "CF[0]" at ALU.v(136)
+Info (10041): Inferred latch for "temp[1]" at ALU.v(136)
+Info (10041): Inferred latch for "SF[0]" at ALU.v(136)
+Info (10041): Inferred latch for "ZF[0]" at ALU.v(136)
+Info (10041): Inferred latch for "C[0]" at ALU.v(136)
+Info (10041): Inferred latch for "C[1]" at ALU.v(136)
+Info (10041): Inferred latch for "C[2]" at ALU.v(136)
+Info (10041): Inferred latch for "C[3]" at ALU.v(136)
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "SF[0]$latch" merged with LATCH primitive "C[3]$latch"
+Warning: Latch C[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal add_current_state.add2_S1
+Warning: Latch C[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal add_current_state.add2_S2
+Warning: Latch C[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal add_current_state.add2_S3
+Warning: Latch C[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal add_current_state.add2_S4
+Warning: Latch ZF[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal add_current_state.add2_S4
+Warning: Latch temp[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal opcode[1]
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "C[4]" is stuck at GND
+Info: 14 registers lost all their fanouts during netlist optimizations. The first 14 are displayed below.
+    Info: Register "add_next_state~35" lost all its fanouts during netlist optimizations.
+    Info: Register "add_next_state~36" lost all its fanouts during netlist optimizations.
+    Info: Register "add_current_state~35" lost all its fanouts during netlist optimizations.
+    Info: Register "add_current_state~36" lost all its fanouts during netlist optimizations.
+    Info: Register "nor_next_state~25" lost all its fanouts during netlist optimizations.
+    Info: Register "nor_next_state~26" lost all its fanouts during netlist optimizations.
+    Info: Register "nor_current_state~25" lost all its fanouts during netlist optimizations.
+    Info: Register "nor_current_state~26" lost all its fanouts during netlist optimizations.
+    Info: Register "and_next_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "and_next_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "and_current_state~15" lost all its fanouts during netlist optimizations.
+    Info: Register "and_current_state~16" lost all its fanouts during netlist optimizations.
+    Info: Register "nor_current_state.nor2_S0" lost all its fanouts during netlist optimizations.
+    Info: Register "and_current_state.and2_S0" lost all its fanouts during netlist optimizations.
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst"
+Info: Implemented 91 device resources after synthesis - the final resource count might be different
+    Info: Implemented 13 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 70 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 217 megabytes
+    Info: Processing ended: Sat Dec 17 14:38:01 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
